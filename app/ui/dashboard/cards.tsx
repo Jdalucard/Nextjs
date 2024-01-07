@@ -13,7 +13,12 @@ const iconMap = {
   invoices: InboxIcon,
 };
 
-export default async function CardWrapper() {
+interface CardProps {
+  title: string;
+  value: number | string;
+  type: string;
+}
+export default function CardWrapper({ title, value, type }: CardProps) {
   const numberOfInvoices = 100;
   const totalPendingInvoices = 50;
   const totalPaidInvoices = 50;
