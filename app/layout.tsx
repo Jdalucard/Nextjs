@@ -1,3 +1,6 @@
+import './ui/global.css';
+import { poppins } from './ui/fonts';
+
 export default function RootLayout({
   children,
 }: {
@@ -5,7 +8,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <div className={`${poppins.className} antialiased`}>{children}</div>
+        <footer>footer para todos</footer>
+      </body>
     </html>
   );
 }
